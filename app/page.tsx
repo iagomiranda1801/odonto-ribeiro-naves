@@ -10,7 +10,7 @@ import { ServiceCard } from "@/components/ServiceCard";
 import { TestimonialCard } from "@/components/TestimonialCard";
 import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
-import { services, siteConfig, testimonials } from "@/lib/site";
+import { dentists, services, siteConfig, testimonials } from "@/lib/site";
 
 export const metadata: Metadata = buildMetadata({
   title: "Odontologia Ribeiro Naves | Dentista em Taguatinga, Brasília",
@@ -87,6 +87,13 @@ export default function HomePage() {
               escuta e previsibilidade. Cada plano é pensado para equilibrar saúde bucal, estética natural
               e conforto ao longo do tratamento.
             </p>
+            <div className="mt-5 grid gap-2 text-sm font-semibold text-navy-900">
+              {dentists.map((dentist) => (
+                <p key={dentist.registry}>
+                  {dentist.name} - {dentist.registry}
+                </p>
+              ))}
+            </div>
             <Link className="focus-ring mt-6 inline-flex rounded-full border border-gold-500 px-6 py-3 text-sm font-bold text-navy-900" href="/sobre-a-clinica">
               Conhecer a Ribeiro Naves
             </Link>

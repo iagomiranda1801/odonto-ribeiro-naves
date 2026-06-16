@@ -1,6 +1,6 @@
 ﻿import Link from "next/link";
 import { Clock, Instagram, Mail, MapPin, Phone } from "lucide-react";
-import { navItems, siteConfig, whatsappUrl } from "@/lib/site";
+import { dentists, navItems, siteConfig, whatsappUrl } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -26,6 +26,14 @@ export function Footer() {
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-400">Contato</p>
           <ul className="mt-4 grid gap-3 text-sm text-slate-300">
+            {dentists.map((dentist) => (
+              <li className="flex gap-3" key={dentist.registry}>
+                <Phone aria-hidden className="mt-0.5 h-5 w-5 text-gold-400" />
+                <span>
+                  {dentist.name} - {dentist.registry}
+                </span>
+              </li>
+            ))}
             <li className="flex gap-3">
               <MapPin aria-hidden className="mt-0.5 h-5 w-5 text-gold-400" />
               {siteConfig.address.display}

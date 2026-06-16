@@ -2,27 +2,38 @@
   name: "Odontologia Ribeiro Naves",
   shortName: "Ribeiro Naves",
   baseUrl: "https://odontologiaribeironaves.com.br",
-  phoneDisplay: "(61) 99999-9999",
-  phoneRaw: "+5561999999999",
+  phoneDisplay: "(61) 98617-4519",
+  phoneRaw: "+5561986174519",
   email: "contato@odontologiaribeironaves.com.br",
   address: {
-    street: "Taguatinga Centro",
+    street: "QND 01 Lote 20, Sala 05",
     city: "Brasília",
     region: "DF",
-    postalCode: "72000-000",
+    postalCode: "72120-010",
     country: "BR",
-    display: "Taguatinga, Brasília - DF"
+    display: "QND 01 Lote 20, Sala 05, Taguatinga, Brasília - DF, 72120-010"
   },
   geo: {
     latitude: -15.8319,
     longitude: -48.0569
   },
   social: {
-    instagram: "https://www.instagram.com/"
+    instagram: "https://www.instagram.com/odontoribeironaves/"
   },
   whatsappText:
     "Olá, gostaria de agendar uma avaliação na Odontologia Ribeiro Naves."
 };
+
+export const dentists = [
+  {
+    name: "Dr. Ademilson Naves",
+    registry: "CRO-DF 3464"
+  },
+  {
+    name: "Dra. Cíntia R. Naves",
+    registry: "CRO-DF 3547"
+  }
+];
 
 export const whatsappUrl = `https://wa.me/${siteConfig.phoneRaw.replace(
   /\D/g,

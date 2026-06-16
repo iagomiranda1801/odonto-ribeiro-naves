@@ -55,7 +55,7 @@ export default function ContactPage() {
               Clínica em Taguatinga, com acesso facilitado para pacientes de Brasília e regiões próximas.
             </p>
             <p className="mt-4 text-slate-300">
-              Substitua este bloco pelo iframe do Google Maps quando o perfil definitivo da clínica estiver configurado.
+              Endereço informado pela clínica: {siteConfig.address.display}.
             </p>
           </div>
         </div>

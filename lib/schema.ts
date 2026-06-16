@@ -1,5 +1,5 @@
 ﻿import type { BreadcrumbItem, FaqItem } from "@/lib/site";
-import { siteConfig, services } from "@/lib/site";
+import { dentists, siteConfig, services } from "@/lib/site";
 
 export function dentistSchema(path = "/") {
   return {
@@ -27,6 +27,11 @@ export function dentistSchema(path = "/") {
     },
     areaServed: ["Taguatinga", "Brasília", "Distrito Federal"],
     medicalSpecialty: ["Dentistry", "Oral Implantology", "Cosmetic Dentistry", "Orthodontics"],
+    employee: dentists.map((dentist) => ({
+      "@type": "Dentist",
+      name: dentist.name,
+      identifier: dentist.registry
+    })),
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Tratamentos odontológicos",

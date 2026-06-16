@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="pt-BR">
-      <body className="font-sans">
+      <body className="font-sans" suppressHydrationWarning>
         <SEOJsonLd data={dentistSchema()} />
         <Header />
         <main>{children}</main>

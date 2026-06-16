@@ -6,6 +6,7 @@ import { CTASection } from "@/components/CTASection";
 import { SEOJsonLd } from "@/components/SEOJsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { buildMetadata } from "@/lib/seo";
+import { dentists } from "@/lib/site";
 
 const breadcrumbs = [{ name: "Sobre a clínica", href: "/sobre-a-clinica" }];
 
@@ -57,6 +58,26 @@ export default function AboutPage() {
               <p className="mt-3 leading-7 text-slate-700">{item.text}</p>
             </article>
           ))}
+        </div>
+      </section>
+      <section className="bg-porcelain py-16">
+        <div className="container-padded">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-gold-500">Equipe responsável</p>
+          <h2 className="mt-3 font-serif text-3xl font-bold text-navy-950">
+            Cirurgiões-dentistas da Odontologia Ribeiro Naves
+          </h2>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {dentists.map((dentist) => (
+              <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm" key={dentist.registry}>
+                <h3 className="text-2xl font-bold text-navy-950">{dentist.name}</h3>
+                <p className="mt-2 font-semibold text-gold-500">{dentist.registry}</p>
+                <p className="mt-4 leading-7 text-slate-700">
+                  Atendimento odontológico com foco em diagnóstico, planejamento e cuidado próximo
+                  em todas as etapas do tratamento.
+                </p>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
       <CTASection />
