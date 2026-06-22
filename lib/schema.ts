@@ -9,8 +9,7 @@ export function dentistSchema(path = "/") {
     name: siteConfig.name,
     url: `${siteConfig.baseUrl}${path}`,
     image: `${siteConfig.baseUrl}/images/og-ribeiro-naves.svg`,
-    telephone: siteConfig.phoneRaw,
-    email: siteConfig.email,
+    telephone: siteConfig.landlineRaw,
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -32,6 +31,20 @@ export function dentistSchema(path = "/") {
       name: dentist.name,
       identifier: dentist.registry
     })),
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.landlineRaw,
+        contactType: "appointments",
+        availableLanguage: "Portuguese"
+      },
+      {
+        "@type": "ContactPoint",
+        telephone: siteConfig.phoneRaw,
+        contactType: "customer service",
+        availableLanguage: "Portuguese"
+      }
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Tratamentos odontológicos",
@@ -45,14 +58,6 @@ export function dentistSchema(path = "/") {
         }
       }))
     },
-    openingHoursSpecification: [
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        opens: "08:00",
-        closes: "18:00"
-      }
-    ],
     sameAs: [siteConfig.social.instagram]
   };
 }

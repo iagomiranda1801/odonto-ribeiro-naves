@@ -1,0 +1,18 @@
+﻿<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="topArc" d="M43 120A77 77 0 0 1 197 120"/>
+    <path id="bottomArc" d="M197 126A77 77 0 0 1 43 126"/>
+  </defs>
+  <circle cx="120" cy="120" r="112" fill="#101E38"/>
+  <circle cx="120" cy="120" r="96" stroke="#B58A62" stroke-width="2"/>
+  <circle cx="120" cy="120" r="82" stroke="#C6A47C" stroke-width="1" opacity="0.7"/>
+  <text fill="#F7F4F1" font-family="Georgia, serif" font-size="13" letter-spacing="3.2">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle">ODONTOLOGIA</textPath>
+  </text>
+  <text fill="#F7F4F1" font-family="Georgia, serif" font-size="12" letter-spacing="2.6">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">RIBEIRO NAVES</textPath>
+  </text>
+  <path d="M80 153V86H110C124 86 134 96 134 109C134 122 124 132 110 132H90" stroke="#B58A62" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M100 121L139 153" stroke="#B58A62" stroke-width="3" stroke-linecap="round"/>
+  <path d="M132 153V86L166 132V86" stroke="#B58A62" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

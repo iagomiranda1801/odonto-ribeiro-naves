@@ -1,5 +1,6 @@
 ﻿import Link from "next/link";
-import { Clock, Instagram, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { Clock, Instagram, MapPin, Phone } from "lucide-react";
 import { dentists, navItems, siteConfig, whatsappUrl } from "@/lib/site";
 
 export function Footer() {
@@ -7,7 +8,16 @@ export function Footer() {
     <footer className="bg-navy-950 text-white">
       <div className="container-padded grid gap-10 py-14 md:grid-cols-[1.2fr_0.8fr_1fr]">
         <div>
-          <p className="font-serif text-3xl font-bold">Odontologia Ribeiro Naves</p>
+          <div className="flex items-center gap-4">
+            <Image
+              alt="Logotipo da Odontologia Ribeiro Naves"
+              className="h-20 w-20"
+              height={240}
+              src="/images/logo-ribeiro-naves.svg"
+              width={240}
+            />
+            <p className="font-serif text-2xl font-bold">Odontologia Ribeiro Naves</p>
+          </div>
           <p className="mt-4 max-w-sm text-sm leading-7 text-slate-300">
             Clínica odontológica em Taguatinga, Brasília, com atendimento humanizado,
             planejamento criterioso e foco em tratamentos que unem saúde, função e estética.
@@ -40,19 +50,19 @@ export function Footer() {
             </li>
             <li className="flex gap-3">
               <Phone aria-hidden className="mt-0.5 h-5 w-5 text-gold-400" />
-              <a className="focus-ring rounded" href={whatsappUrl} rel="noopener noreferrer" target="_blank">
-                {siteConfig.phoneDisplay}
+              <a className="focus-ring rounded" href={`tel:${siteConfig.landlineRaw}`}>
+                {siteConfig.landlineDisplay}
               </a>
             </li>
             <li className="flex gap-3">
-              <Mail aria-hidden className="mt-0.5 h-5 w-5 text-gold-400" />
-              <a className="focus-ring rounded" href={`mailto:${siteConfig.email}`}>
-                {siteConfig.email}
+              <Phone aria-hidden className="mt-0.5 h-5 w-5 text-gold-400" />
+              <a className="focus-ring rounded" href={whatsappUrl} rel="noopener noreferrer" target="_blank">
+                WhatsApp: {siteConfig.phoneDisplay}
               </a>
             </li>
             <li className="flex gap-3">
               <Clock aria-hidden className="mt-0.5 h-5 w-5 text-gold-400" />
-              Segunda a sexta, com horário agendado
+              {siteConfig.address.access} - atendimento com horário agendado
             </li>
             <li className="flex gap-3">
               <Instagram aria-hidden className="mt-0.5 h-5 w-5 text-gold-400" />

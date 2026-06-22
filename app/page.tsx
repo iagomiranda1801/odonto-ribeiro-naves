@@ -103,7 +103,7 @@ export default function HomePage() {
 
       <section className="bg-porcelain py-16">
         <div className="container-padded">
-          <h2 className="font-serif text-3xl font-bold text-navy-950">Avaliacoes de pacientes</h2>
+          <h2 className="font-serif text-3xl font-bold text-navy-950">Avaliações de pacientes</h2>
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {testimonials.map((testimonial) => (
               <TestimonialCard key={testimonial.name} {...testimonial} />
@@ -125,7 +125,7 @@ export default function HomePage() {
             </p>
             <p className="mt-4 font-semibold text-navy-900">{siteConfig.address.display}</p>
           </div>
-          <div className="min-h-72 rounded-md bg-[linear-gradient(135deg,#0B1F35,#174263)] p-6 text-white">
+          <div className="min-h-72 rounded-md bg-[linear-gradient(135deg,#101E38,#254563)] p-6 text-white">
             <p className="text-sm font-semibold uppercase tracking-[0.16em] text-gold-400">Google Maps</p>
             <p className="mt-20 max-w-md text-2xl font-bold">
               Fácil acesso para pacientes de Taguatinga, Águas Claras, Ceilândia e Plano Piloto.

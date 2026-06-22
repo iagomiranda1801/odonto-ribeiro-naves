@@ -2,16 +2,18 @@
   name: "Odontologia Ribeiro Naves",
   shortName: "Ribeiro Naves",
   baseUrl: "https://odontologiaribeironaves.com.br",
+  landlineDisplay: "(61) 3562-6592",
+  landlineRaw: "+556135626592",
   phoneDisplay: "(61) 98617-4519",
   phoneRaw: "+5561986174519",
-  email: "contato@odontologiaribeironaves.com.br",
   address: {
-    street: "QND 01 Lote 20, Sala 05",
+    street: "QND 01 Lote 20, Sala 05, 1º andar",
     city: "Brasília",
     region: "DF",
     postalCode: "72120-010",
     country: "BR",
-    display: "QND 01 Lote 20, Sala 05, Taguatinga, Brasília - DF, 72120-010"
+    display: "QND 01 Lote 20, Sala 05, 1º andar, Taguatinga Norte - DF, 72120-010",
+    access: "Entrada lateral"
   },
   geo: {
     latitude: -15.8319,
@@ -27,10 +29,10 @@
 export const dentists = [
   {
     name: "Dr. Ademilson Naves",
-    registry: "CRO-DF 3464"
+    registry: "CRO-DF 3454"
   },
   {
-    name: "Dra. Cíntia R. Naves",
+    name: "Dra. Cíntia Ribeiro Naves",
     registry: "CRO-DF 3547"
   }
 ];

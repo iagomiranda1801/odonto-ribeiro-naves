@@ -1,5 +1,5 @@
 ﻿import type { Metadata } from "next";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Instagram, MapPin, MessageCircle, Phone } from "lucide-react";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
 import { SEOJsonLd } from "@/components/SEOJsonLd";
@@ -12,7 +12,7 @@ const breadcrumbs = [{ name: "Contato", href: "/contato" }];
 export const metadata: Metadata = buildMetadata({
   title: "Contato | Dentista em Taguatinga - Odontologia Ribeiro Naves",
   description:
-    "Agende sua avaliação odontológica em Taguatinga, Brasília. Fale com a Odontologia Ribeiro Naves pelo WhatsApp, telefone ou e-mail.",
+    "Agende sua avaliação odontológica em Taguatinga Norte. Fale com a Odontologia Ribeiro Naves pelo WhatsApp, telefone ou Instagram.",
   path: "/contato"
 });
 
@@ -31,12 +31,13 @@ export default function ContactPage() {
             Fale com a equipe da Odontologia Ribeiro Naves para entender horários, tirar dúvidas
             iniciais e marcar sua consulta com tranquilidade.
           </p>
-          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {[
               { icon: MessageCircle, title: "WhatsApp", text: siteConfig.phoneDisplay, href: whatsappUrl },
-              { icon: Phone, title: "Telefone", text: siteConfig.phoneDisplay, href: `tel:${siteConfig.phoneRaw}` },
-              { icon: Mail, title: "E-mail", text: siteConfig.email, href: `mailto:${siteConfig.email}` },
-              { icon: MapPin, title: "Endereço", text: siteConfig.address.display, href: "#" }
+              { icon: Phone, title: "Telefone fixo", text: siteConfig.landlineDisplay, href: `tel:${siteConfig.landlineRaw}` },
+              { icon: Instagram, title: "Instagram", text: "@odontoribeironaves", href: siteConfig.social.instagram },
+              { icon: MapPin, title: "Endereço", text: siteConfig.address.display, href: "#" },
+              { icon: MapPin, title: "Acesso", text: siteConfig.address.access, href: "#" }
             ].map((item) => (
               <a className="focus-ring rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-soft" href={item.href} key={item.title}>
                 <item.icon aria-hidden className="h-8 w-8 text-gold-500" />
@@ -50,12 +51,12 @@ export default function ContactPage() {
       <section className="bg-white py-16">
         <div className="container-padded rounded-lg border border-slate-200 p-6 md:p-8">
           <h2 className="font-serif text-3xl font-bold text-navy-950">Como chegar</h2>
-          <div className="mt-6 min-h-80 rounded-md bg-[linear-gradient(135deg,#0B1F35,#174263)] p-6 text-white">
+          <div className="mt-6 min-h-80 rounded-md bg-[linear-gradient(135deg,#101E38,#254563)] p-6 text-white">
             <p className="max-w-xl text-2xl font-bold">
               Clínica em Taguatinga, com acesso facilitado para pacientes de Brasília e regiões próximas.
             </p>
             <p className="mt-4 text-slate-300">
-              Endereço informado pela clínica: {siteConfig.address.display}.
+              {siteConfig.address.display}. A entrada da clínica é pela lateral.
             </p>
           </div>
         </div>

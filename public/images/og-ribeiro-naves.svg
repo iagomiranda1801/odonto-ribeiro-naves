@@ -1,10 +1,13 @@
-<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#0B1F35"/>
+﻿<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#101E38"/>
   <rect x="72" y="70" width="1056" height="490" rx="26" fill="#FFFFFF"/>
-  <path d="M210 235C246 168 325 158 365 228C407 158 486 168 520 235C561 315 465 415 365 472C265 415 169 315 210 235Z" fill="#F7F9FB" stroke="#B8924A" stroke-width="14"/>
-  <text x="610" y="245" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#071526">Odontologia</text>
-  <text x="610" y="313" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#071526">Ribeiro Naves</text>
-  <text x="610" y="382" font-family="Arial, sans-serif" font-size="28" fill="#395064">Taguatinga, Brasilia - DF</text>
-  <rect x="610" y="420" width="326" height="54" rx="27" fill="#B8924A"/>
-  <text x="645" y="456" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">Agende sua avaliacao</text>
+  <circle cx="360" cy="315" r="150" fill="#101E38" stroke="#B58A62" stroke-width="8"/>
+  <circle cx="360" cy="315" r="125" stroke="#C6A47C" stroke-width="3"/>
+  <path d="M270 395V235H338C371 235 394 258 394 288C394 318 371 341 338 341H292" stroke="#B58A62" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M316 318L410 395M389 395V235L462 341V235" stroke="#B58A62" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="610" y="245" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#0A1427">Odontologia</text>
+  <text x="610" y="313" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#0A1427">Ribeiro Naves</text>
+  <text x="610" y="382" font-family="Arial, sans-serif" font-size="28" fill="#395064">Taguatinga Norte - DF</text>
+  <rect x="610" y="420" width="326" height="54" rx="27" fill="#B58A62"/>
+  <text x="645" y="456" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF">Agende sua avaliação</text>
 </svg>

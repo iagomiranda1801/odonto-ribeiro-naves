@@ -5,7 +5,7 @@
 :root {
   color-scheme: light;
   --background: #ffffff;
-  --foreground: #071526;
+  --foreground: #0a1427;
 }
 
 * {
@@ -30,8 +30,8 @@ a {
 }
 
 ::selection {
-  background: #c9a45d;
-  color: #071526;
+  background: #c6a47c;
+  color: #0a1427;
 }
 
 .container-padded {
