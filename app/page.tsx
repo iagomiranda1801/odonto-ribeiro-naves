@@ -15,7 +15,7 @@ import { dentists, services, siteConfig, testimonials } from "@/lib/site";
 export const metadata: Metadata = buildMetadata({
   title: "Odontologia Ribeiro Naves | Dentista em Taguatinga, Brasília",
   description:
-    "Clínica odontológica em Taguatinga, Brasília, com mais de 40 anos de história, implantes, lentes dentais, alinhadores invisíveis e clareamento dental.",
+    "Clínica odontológica em Taguatinga, Brasília, com 33 anos de experiência, implantes, lentes dentais, alinhadores invisíveis e clareamento dental.",
   path: "/"
 });
 
@@ -33,7 +33,7 @@ export default function HomePage() {
       <section className="bg-white py-12">
         <div className="container-padded grid gap-4 md:grid-cols-3">
           {[
-            { icon: Award, value: "+40 anos", label: "de experiência odontológica" },
+            { icon: Award, value: "33 anos", label: "de experiência odontológica" },
             { icon: Smile, value: "Milhares", label: "de pacientes atendidos" },
             { icon: HeartHandshake, value: "Atendimento", label: "humanizado do início ao fim" }
           ].map((item) => (

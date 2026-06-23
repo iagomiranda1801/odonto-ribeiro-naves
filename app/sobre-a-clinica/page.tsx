@@ -13,7 +13,7 @@ const breadcrumbs = [{ name: "Sobre a clínica", href: "/sobre-a-clinica" }];
 export const metadata: Metadata = buildMetadata({
   title: "Sobre a Clínica | Odontologia Ribeiro Naves em Taguatinga",
   description:
-    "Conheça a Odontologia Ribeiro Naves, clínica odontológica em Taguatinga com mais de 40 anos, atendimento humanizado e tratamentos planejados.",
+    "Conheça a Odontologia Ribeiro Naves, clínica odontológica em Taguatinga com 33 anos de experiência, atendimento humanizado e tratamentos planejados.",
   path: "/sobre-a-clinica"
 });
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
       <section className="bg-white py-16">
         <div className="container-padded grid gap-6 md:grid-cols-3">
           {[
-            { icon: Award, title: "+40 anos", text: "Experiência clínica aliada a protocolos atuais e diagnóstico cuidadoso." },
+            { icon: Award, title: "33 anos", text: "Experiência clínica aliada a protocolos atuais e diagnóstico cuidadoso." },
             { icon: ShieldCheck, title: "Planejamento", text: "Tratamentos indicados com transparência, previsibilidade e respeito ao tempo do paciente." },
             { icon: HeartPulse, title: "Humanização", text: "Escuta ativa, linguagem clara e acompanhamento em cada fase do tratamento." }
           ].map((item) => (
