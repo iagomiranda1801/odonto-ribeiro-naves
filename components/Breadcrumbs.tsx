@@ -18,7 +18,7 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
         </li>
         {items.map((item) => (
           <li className="flex items-center gap-2" key={item.href}>
-            <ChevronRight aria-hidden className="h-4 w-4 text-gold-500" />
+            <ChevronRight aria-hidden className="h-4 w-4 text-brand-600" />
             <Link className="focus-ring rounded" href={item.href}>
               {item.name}
             </Link>

@@ -31,7 +31,9 @@ export async function generateMetadata({ params }: ServicePageProps): Promise<Me
     title: service.title,
     description: service.description,
     path: `/${service.slug}`,
-    image: service.image
+    image: service.image,
+    imageWidth: 1536,
+    imageHeight: 1024
   });
 }
 
@@ -52,8 +54,10 @@ export default async function ServicePage({ params }: ServicePageProps) {
         description={service.description}
         eyebrow={service.eyebrow}
         image={service.image}
+        imageAlt={`Ilustração 3D de ${service.shortTitle.toLowerCase()}`}
+        imageCaption="Representação 3D ilustrativa."
         secondaryHref="/contato"
-        secondaryLabel="Ver localizacao"
+        secondaryLabel="Ver localização"
         title={service.h1}
       />
       <Breadcrumbs items={breadcrumbs} />
@@ -61,8 +65,8 @@ export default async function ServicePage({ params }: ServicePageProps) {
       <section className="bg-white py-16">
         <div className="container-padded grid gap-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-gold-500">{service.keywords}</p>
-            <h2 className="mt-3 font-serif text-3xl font-bold text-navy-950">
+            <p className="eyebrow">Sobre o tratamento</p>
+            <h2 className="mt-3 font-sans text-3xl font-bold text-navy-950">
               Tratamento indicado com critério, transparência e foco no seu resultado
             </h2>
             <p className="mt-5 leading-8 text-slate-700">
@@ -73,28 +77,34 @@ export default async function ServicePage({ params }: ServicePageProps) {
             <div className="mt-8 grid gap-4">
               {service.benefits.map((benefit) => (
                 <div className="flex gap-3 rounded-lg border border-slate-200 bg-porcelain p-4" key={benefit}>
-                  <CheckCircle2 aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-gold-500" />
+                  <CheckCircle2 aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
                   <p className="text-sm leading-6 text-slate-700">{benefit}</p>
                 </div>
               ))}
             </div>
           </div>
-          <Image
-            alt={`${service.shortTitle} na Odontologia Ribeiro Naves`}
-            className="rounded-[24px] shadow-soft"
-            height={620}
-            src={service.image}
-            width={900}
-          />
+          <figure className="min-w-0 self-start">
+            <Image
+              alt={`Ilustração 3D de ${service.shortTitle.toLowerCase()}`}
+              className="h-auto w-full rounded-[24px] shadow-soft"
+              height={1024}
+              sizes="(min-width: 1152px) 567px, (min-width: 1024px) 50vw, calc(100vw - 32px)"
+              src={service.image}
+              width={1536}
+            />
+            <figcaption className="mt-3 text-xs leading-5 text-slate-500">
+              Representação 3D ilustrativa.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
       <section className="bg-porcelain py-16">
         <div className="container-padded">
-          <h2 className="font-serif text-3xl font-bold text-navy-950">Como funciona o atendimento</h2>
+          <h2 className="font-sans text-3xl font-bold text-navy-950">Como funciona o atendimento</h2>
           <div className="mt-8 grid gap-5 md:grid-cols-4">
             {service.process.map((step, index) => (
-              <article className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm" key={step}>
+              <article className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm" key={step}>
                 <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-navy-900 text-sm font-bold text-white">
                   {index + 1}
                 </span>

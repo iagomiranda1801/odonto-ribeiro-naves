@@ -1,7 +1,7 @@
 ﻿export const siteConfig = {
   name: "Odontologia Ribeiro Naves",
   shortName: "Ribeiro Naves",
-  baseUrl: "https://odontologiaribeironaves.com.br",
+  baseUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://odonto-ribeiro-naves.vercel.app").replace(/\/+$/, ""),
   landlineDisplay: "(61) 3562-6592",
   landlineRaw: "+556135626592",
   phoneDisplay: "(61) 98617-4519",
@@ -42,6 +42,8 @@ export const whatsappUrl = `https://wa.me/${siteConfig.phoneRaw.replace(
   ""
 )}?text=${encodeURIComponent(siteConfig.whatsappText)}`;
 
+export const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(siteConfig.address.display)}`;
+
 export const navItems = [
   { label: "Home", href: "/" },
   { label: "Sobre", href: "/sobre-a-clinica" },
@@ -68,6 +70,8 @@ export type Service = {
   title: string;
   shortTitle: string;
   description: string;
+  summary: string;
+  linkLabel: string;
   h1: string;
   eyebrow: string;
   keywords: string;
@@ -82,12 +86,14 @@ export const services: Service[] = [
     slug: "implantes-dentarios-taguatinga",
     title: "Implantes Dentários em Taguatinga | Odontologia Ribeiro Naves",
     shortTitle: "Implantes Dentários",
+    summary: "Recupere dentes perdidos e tenha mais segurança para mastigar e sorrir.",
+    linkLabel: "Conhecer os implantes",
     description:
       "Implantes dentários em Taguatinga com planejamento criterioso, tecnologia digital e acompanhamento humanizado para recuperar segurança ao mastigar e sorrir.",
     h1: "Implantes dentários em Taguatinga com planejamento seguro",
     eyebrow: "Reabilitação oral",
     keywords: "implantes dentários em Taguatinga, dentista para implante em Brasília",
-    image: "/images/implantes.svg",
+    image: "/images/implantes-3d-azul.webp",
     benefits: [
       "Planejamento individual para repor dentes perdidos com naturalidade.",
       "Maior firmeza para mastigar, falar e sorrir no dia a dia.",
@@ -121,12 +127,14 @@ export const services: Service[] = [
     slug: "lentes-de-contato-dental-brasilia",
     title: "Lentes de Contato Dental em Brasília | Ribeiro Naves",
     shortTitle: "Lentes de Contato Dental",
+    summary: "Melhore o formato e a harmonia do sorriso com planejamento individual.",
+    linkLabel: "Conhecer as lentes",
     description:
       "Lentes de contato dental em Brasília para transformar o sorriso com estética natural, planejamento facial e acabamento premium em Taguatinga.",
     h1: "Lentes de contato dental em Brasília com estética natural",
     eyebrow: "Estética do sorriso",
     keywords: "lentes de contato dental em Brasília, lentes dentais em Taguatinga",
-    image: "/images/lentes.svg",
+    image: "/images/lentes-3d-azul.webp",
     benefits: [
       "Harmonia de cor, formato e proporção respeitando o seu rosto.",
       "Resultado sofisticado sem aparência artificial.",
@@ -160,12 +168,14 @@ export const services: Service[] = [
     slug: "alinhadores-invisiveis-brasilia",
     title: "Alinhadores Invisíveis em Brasília | Odontologia Ribeiro Naves",
     shortTitle: "Alinhadores Invisíveis",
+    summary: "Alinhe os dentes com placas transparentes e removíveis.",
+    linkLabel: "Conhecer os alinhadores",
     description:
       "Tratamento com alinhadores invisíveis em Brasília para corrigir dentes com conforto, discrição e planejamento digital em Taguatinga.",
     h1: "Alinhadores invisíveis em Brasília para sorrir com discrição",
     eyebrow: "Ortodontia moderna",
     keywords: "alinhadores invisíveis em Brasília, aparelho invisível Taguatinga",
-    image: "/images/alinhadores.svg",
+    image: "/images/alinhadores-3d-azul.webp",
     benefits: [
       "Placas transparentes e removíveis para uma rotina mais confortável.",
       "Planejamento digital para visualizar etapas do tratamento.",
@@ -199,12 +209,14 @@ export const services: Service[] = [
     slug: "clareamento-dental-taguatinga",
     title: "Clareamento Dental em Taguatinga | Ribeiro Naves",
     shortTitle: "Clareamento Dental",
+    summary: "Clareie seu sorriso com um protocolo indicado e acompanhado pelo dentista.",
+    linkLabel: "Conhecer o clareamento",
     description:
       "Clareamento dental em Taguatinga com protocolo profissional, segurança para esmalte e gengiva, e acompanhamento para um sorriso mais luminoso.",
     h1: "Clareamento dental em Taguatinga com segurança e naturalidade",
     eyebrow: "Estética conservadora",
     keywords: "clareamento dental em Taguatinga, clareamento dental Brasília",
-    image: "/images/clareamento.svg",
+    image: "/images/clareamento-3d-azul.webp",
     benefits: [
       "Sorriso mais claro com acompanhamento profissional.",
       "Protocolo personalizado para reduzir sensibilidade.",
@@ -257,6 +269,7 @@ export const testimonials = [
 export const blogPosts = [
   {
     slug: "quando-procurar-implante-dentario-em-taguatinga",
+    image: "/images/implantes-3d-azul.webp",
     title: "Quando procurar implante dentário em Taguatinga?",
     description:
       "Entenda sinais de que o implante dentário pode ser indicado e por que a avaliação individual é essencial.",
@@ -264,6 +277,7 @@ export const blogPosts = [
   },
   {
     slug: "lentes-de-contato-dental-resultado-natural",
+    image: "/images/lentes-3d-azul.webp",
     title: "Como ter lentes de contato dental com resultado natural",
     description:
       "Saiba como planejamento facial, cor e proporção influenciam um sorriso elegante e personalizado.",
@@ -271,6 +285,7 @@ export const blogPosts = [
   },
   {
     slug: "alinhadores-invisiveis-rotina-brasilia",
+    image: "/images/alinhadores-3d-azul.webp",
     title: "Alinhadores invisíveis combinam com rotina corrida?",
     description:
       "Veja como os alinhadores transparentes podem facilitar a ortodontia para adultos em Brasília.",

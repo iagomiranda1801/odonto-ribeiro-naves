@@ -9,25 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        brand: {
+          50: "#F0F7FC", 100: "#E0EFFA", 200: "#BDDDF3", 300: "#85BCE3",
+          400: "#4A96CE", 500: "#247AB9", 600: "#17639D", 700: "#164F7D",
+          800: "#183F61", 900: "#17344E", 950: "#0C2235"
+        },
         navy: {
-          950: "#0A1427",
-          900: "#101E38",
-          800: "#192E4D",
-          700: "#254563"
+          950: "#0C2235",
+          900: "#17344E",
+          800: "#183F61",
+          700: "#164F7D"
         },
         gold: {
           500: "#B58A62",
           400: "#C6A47C",
           100: "#F2E7DC"
         },
-        porcelain: "#F7F9FB"
+        porcelain: "#F5F8FB"
       },
       fontFamily: {
-        sans: ["Arial", "Helvetica", "sans-serif"],
-        serif: ["Georgia", "Times New Roman", "serif"]
+        sans: ["var(--font-manrope)", "Arial", "sans-serif"]
       },
       boxShadow: {
-        soft: "0 18px 50px rgba(7, 21, 38, 0.12)"
+        soft: "0 16px 48px rgba(23, 63, 97, 0.07)"
       }
     }
   },

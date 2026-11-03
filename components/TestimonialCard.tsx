@@ -8,9 +8,9 @@ type TestimonialCardProps = {
 
 export function TestimonialCard({ name, text, treatment }: TestimonialCardProps) {
   return (
-    <figure className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm">
-      <Quote aria-hidden className="h-8 w-8 text-gold-500" />
-      <div className="mt-4 flex gap-1 text-gold-500" aria-label="Avaliação cinco estrelas">
+    <figure className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm">
+      <Quote aria-hidden className="h-8 w-8 text-brand-600" />
+      <div className="mt-4 flex gap-1 text-brand-600" aria-label="Avaliação cinco estrelas">
         {Array.from({ length: 5 }).map((_, index) => (
           <Star aria-hidden className="h-4 w-4 fill-current" key={index} />
         ))}

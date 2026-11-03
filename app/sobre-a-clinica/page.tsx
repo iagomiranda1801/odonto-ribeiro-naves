@@ -25,8 +25,8 @@ export default function AboutPage() {
       <section className="bg-porcelain py-16">
         <div className="container-padded grid items-center gap-10 lg:grid-cols-2">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.18em] text-gold-500">Sobre a clínica</p>
-            <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-navy-950 lg:text-5xl">
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">Sobre a clínica</p>
+            <h1 className="mt-4 font-sans text-4xl font-bold leading-tight text-navy-950 lg:text-5xl">
               Odontologia Ribeiro Naves: tradição e cuidado premium em Taguatinga
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-700">
@@ -35,14 +35,19 @@ export default function AboutPage() {
               a equipe busca construir planos claros, confortáveis e sustentáveis para o sorriso.
             </p>
           </div>
-          <Image
-            alt="Estrutura da clínica Odontologia Ribeiro Naves"
-            className="rounded-[24px] shadow-soft"
-            height={980}
-            priority
-            src="/images/hero-clinica.svg"
-            width={1400}
-          />
+          <figure className="min-w-0">
+            <Image
+              alt="Composição ilustrativa com modelo dentário e espelho odontológico sobre uma bandeja"
+              className="h-auto w-full rounded-[24px] shadow-soft"
+              height={1024}
+              sizes="(min-width: 1152px) 540px, (min-width: 1024px) 50vw, calc(100vw - 32px)"
+              src="/images/cuidado-odontologico-azul.webp"
+              width={1536}
+            />
+            <figcaption className="mt-3 text-xs leading-5 text-slate-500">
+              Imagem ilustrativa.
+            </figcaption>
+          </figure>
         </div>
       </section>
       <section className="bg-white py-16">
@@ -52,8 +57,8 @@ export default function AboutPage() {
             { icon: ShieldCheck, title: "Planejamento", text: "Tratamentos indicados com transparência, previsibilidade e respeito ao tempo do paciente." },
             { icon: HeartPulse, title: "Humanização", text: "Escuta ativa, linguagem clara e acompanhamento em cada fase do tratamento." }
           ].map((item) => (
-            <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm" key={item.title}>
-              <item.icon aria-hidden className="h-8 w-8 text-gold-500" />
+            <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm" key={item.title}>
+              <item.icon aria-hidden className="h-8 w-8 text-brand-600" />
               <h2 className="mt-5 text-2xl font-bold text-navy-950">{item.title}</h2>
               <p className="mt-3 leading-7 text-slate-700">{item.text}</p>
             </article>
@@ -62,15 +67,15 @@ export default function AboutPage() {
       </section>
       <section className="bg-porcelain py-16">
         <div className="container-padded">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-gold-500">Equipe responsável</p>
-          <h2 className="mt-3 font-serif text-3xl font-bold text-navy-950">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">Equipe responsável</p>
+          <h2 className="mt-3 font-sans text-3xl font-bold text-navy-950">
             Cirurgiões-dentistas da Odontologia Ribeiro Naves
           </h2>
           <div className="mt-8 grid gap-5 md:grid-cols-2">
             {dentists.map((dentist) => (
-              <article className="rounded-lg border border-slate-200 bg-white p-6 shadow-sm" key={dentist.registry}>
+              <article className="rounded-2xl border border-slate-200/80 bg-white p-6 shadow-sm" key={dentist.registry}>
                 <h3 className="text-2xl font-bold text-navy-950">{dentist.name}</h3>
-                <p className="mt-2 font-semibold text-gold-500">{dentist.registry}</p>
+                <p className="mt-2 font-semibold text-brand-600">{dentist.registry}</p>
                 <p className="mt-4 leading-7 text-slate-700">
                   Atendimento odontológico com foco em diagnóstico, planejamento e cuidado próximo
                   em todas as etapas do tratamento.

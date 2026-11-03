@@ -1,4 +1,5 @@
 ﻿import { notFound } from "next/navigation";
+import Image from "next/image";
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CTASection } from "@/components/CTASection";
@@ -44,7 +45,10 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   return buildMetadata({
     title: `${post.title} | Odontologia Ribeiro Naves`,
     description: post.description,
-    path: `/blog/${post.slug}`
+    path: `/blog/${post.slug}`,
+    image: post.image,
+    imageWidth: 1536,
+    imageHeight: 1024
   });
 }
 
@@ -67,11 +71,15 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       <Breadcrumbs items={breadcrumbs} />
       <article className="bg-white py-16">
         <div className="container-padded max-w-3xl">
-          <p className="text-sm font-bold uppercase tracking-[0.18em] text-gold-500">Blog Ribeiro Naves</p>
-          <h1 className="mt-4 font-serif text-4xl font-bold leading-tight text-navy-950 lg:text-5xl">
+          <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">Blog Ribeiro Naves</p>
+          <h1 className="mt-4 font-sans text-4xl font-bold leading-tight text-navy-950 lg:text-5xl">
             {post.title}
           </h1>
           <p className="mt-5 text-lg leading-8 text-slate-700">{post.description}</p>
+          <figure className="mt-8">
+            <Image alt={`Ilustração sobre ${post.title.toLowerCase()}`} className="h-auto w-full rounded-2xl" src={post.image} height={1024} width={1536} sizes="(min-width: 808px) 768px, calc(100vw - 40px)" />
+            <figcaption className="mt-3 text-xs text-slate-500">Imagem ilustrativa.</figcaption>
+          </figure>
           <div className="mt-10 space-y-6 text-lg leading-9 text-slate-700">
             {postBodies[post.slug].map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>

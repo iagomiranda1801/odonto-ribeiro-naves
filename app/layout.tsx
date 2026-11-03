@@ -1,11 +1,19 @@
 ﻿import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import localFont from "next/font/local";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { SEOJsonLd } from "@/components/SEOJsonLd";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppFloatingButton";
 import { dentistSchema } from "@/lib/schema";
 import { siteConfig } from "@/lib/site";
+
+const manrope = localFont({
+  src: "./fonts/Manrope-Variable.ttf",
+  variable: "--font-manrope",
+  display: "swap",
+  weight: "200 800"
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.baseUrl),
@@ -29,12 +37,12 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#101E38"
+  themeColor: "#17639D"
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="pt-BR">
+    <html className={manrope.variable} lang="pt-BR">
       <body className="font-sans" suppressHydrationWarning>
         <SEOJsonLd data={dentistSchema()} />
         <Header />

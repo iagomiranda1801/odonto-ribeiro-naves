@@ -6,13 +6,17 @@ type SeoInput = {
   description: string;
   path?: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
 };
 
 export function buildMetadata({
   title,
   description,
   path = "/",
-  image = "/images/og-ribeiro-naves.svg"
+  image = "/images/og-ribeiro-naves.svg",
+  imageWidth = 1200,
+  imageHeight = 630
 }: SeoInput): Metadata {
   const url = new URL(path, siteConfig.baseUrl).toString();
   const imageUrl = new URL(image, siteConfig.baseUrl).toString();
@@ -33,8 +37,8 @@ export function buildMetadata({
       images: [
         {
           url: imageUrl,
-          width: 1200,
-          height: 630,
+          width: imageWidth,
+          height: imageHeight,
           alt: `${siteConfig.name} em Taguatinga, Brasília`
         }
       ]

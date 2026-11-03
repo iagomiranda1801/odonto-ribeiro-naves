@@ -5,12 +5,13 @@ export function WhatsAppFloatingButton() {
   return (
     <a
       aria-label="Agendar avaliação pelo WhatsApp"
-      className="focus-ring fixed bottom-5 right-5 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-soft transition hover:scale-105"
+      className="focus-ring fixed bottom-5 right-5 z-50 inline-flex min-h-12 items-center justify-center gap-2 rounded-full bg-[#137A4A] px-4 py-3 text-sm font-bold text-white shadow-soft transition hover:bg-[#10663E] sm:px-5"
       href={whatsappUrl}
       rel="noopener noreferrer"
       target="_blank"
     >
-      <MessageCircle aria-hidden className="h-7 w-7" />
+      <MessageCircle aria-hidden className="h-5 w-5" />
+      <span>Agendar</span>
     </a>
   );
 }

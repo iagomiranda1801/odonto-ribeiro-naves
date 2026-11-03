@@ -1,4 +1,4 @@
-﻿import { CalendarCheck } from "lucide-react";
+﻿import { MessageCircle } from "lucide-react";
 import { whatsappUrl } from "@/lib/site";
 
 type CTASectionProps = {
@@ -11,20 +11,21 @@ export function CTASection({
   text = "Converse com a equipe da Odontologia Ribeiro Naves e receba uma orientação clara sobre o melhor caminho para o seu sorriso."
 }: CTASectionProps) {
   return (
-    <section className="bg-navy-900 py-16 text-white">
-      <div className="container-padded flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+    <section className="border-y border-brand-100 bg-brand-50 py-12 sm:py-16">
+      <div className="container-padded flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-center">
         <div>
-          <h2 className="font-serif text-3xl font-bold">{title}</h2>
-          <p className="mt-3 max-w-2xl leading-7 text-slate-300">{text}</p>
+          <p className="eyebrow mb-3">Vamos conversar?</p>
+          <h2 className="max-w-2xl font-sans text-3xl font-bold text-navy-950">{title}</h2>
+          <p className="mt-4 max-w-2xl leading-7 text-slate-600">{text}</p>
         </div>
         <a
-          className="focus-ring inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-gold-500 px-6 py-4 text-sm font-bold text-white transition hover:bg-gold-400"
+          className="btn-primary w-full shrink-0 sm:w-auto"
           href={whatsappUrl}
           rel="noopener noreferrer"
           target="_blank"
         >
-          <CalendarCheck aria-hidden className="h-5 w-5" />
-          Chamar no WhatsApp
+          <MessageCircle aria-hidden className="h-5 w-5" />
+          Agendar pelo WhatsApp
         </a>
       </div>
     </section>

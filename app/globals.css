@@ -5,7 +5,7 @@
 :root {
   color-scheme: light;
   --background: #ffffff;
-  --foreground: #0a1427;
+  --foreground: #0c2235;
 }
 
 * {
@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 
 body {
@@ -30,15 +31,46 @@ a {
 }
 
 ::selection {
-  background: #c6a47c;
-  color: #0a1427;
+  background: #bdddf3;
+  color: #0c2235;
 }
 
 .container-padded {
-  width: min(1120px, calc(100% - 32px));
+  width: min(1200px, calc(100% - 40px));
   margin-inline: auto;
 }
 
 .focus-ring {
-  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold-500;
+  @apply focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand-600;
+}
+
+@layer base {
+  h1, h2 { letter-spacing: -0.04em; }
+  h3 { letter-spacing: -0.025em; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-brand-600 px-6 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-brand-700;
+  }
+
+  .btn-secondary {
+    @apply focus-ring inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-brand-200 bg-white px-6 py-3.5 text-sm font-bold text-brand-700 transition hover:border-brand-400 hover:bg-brand-50;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.16em] text-brand-600;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-slate-200/80 bg-white shadow-sm;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
 }
