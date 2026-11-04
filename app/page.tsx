@@ -145,6 +145,41 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section aria-labelledby="resultados-title" className="bg-white py-12 sm:py-16" id="resultados">
+        <div className="container-padded grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <figure className="mx-auto w-full max-w-md min-w-0">
+            <Image
+              alt={"Sorriso de paciente ap\u00f3s clareamento dental realizado na Odontologia Ribeiro Naves"}
+              className="h-auto w-full rounded-[24px] object-cover shadow-soft"
+              height={1024}
+              sizes="(min-width: 1024px) 448px, calc(100vw - 40px)"
+              src="/images/resultado-clareamento.jpg"
+              width={823}
+            />
+            <figcaption className="mt-3 text-xs leading-5 text-slate-500">
+              {"Clareamento dental realizado na cl\u00ednica. Resultados podem variar de pessoa para pessoa."}
+            </figcaption>
+          </figure>
+          <div>
+            <p className="text-sm font-bold uppercase tracking-[0.18em] text-brand-600">Resultados</p>
+            <h2 className="mt-3 font-sans text-3xl font-bold text-navy-950" id="resultados-title">
+              {"Sorrisos transformados na Ribeiro Naves"}
+            </h2>
+            <p className="mt-5 leading-8 text-slate-700">
+              {"Este \u00e9 um clareamento dental feito em nossa cl\u00ednica: dentes mais brancos, com aspecto natural e planejamento individual para cada paciente."}
+            </p>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
+              <Link className="btn-secondary" href="/clareamento-dental-taguatinga">
+                {"Conhecer o clareamento"}
+              </Link>
+              <a className="btn-primary" href={whatsappUrl} rel="noopener noreferrer" target="_blank">
+                <MessageCircle aria-hidden className="h-5 w-5" />
+                {"Agendar avalia\u00e7\u00e3o"}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className="bg-porcelain py-16">
         <div className="container-padded">
           <h2 className="font-sans text-3xl font-bold text-navy-950">Avaliações de pacientes</h2>
