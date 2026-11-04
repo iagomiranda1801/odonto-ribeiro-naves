@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { ArrowUpRight, Award, CalendarCheck, ClipboardCheck, HeartHandshake, MapPin, MessageCircle } from "lucide-react";
@@ -24,6 +24,9 @@ export default function HomePage() {
       <SEOJsonLd data={breadcrumbSchema([])} />
       <HeroSection
         compact
+        image="/images/dra-cintia-ribeiro.jpg"
+        imageAlt="Dra. Cintia Ribeiro, dentista da Odontologia Ribeiro Naves"
+        imageCaption="Dra. Cintia Ribeiro"
         description="Implantes, lentes dentais, alinhadores e clareamento com planejamento individual e acompanhamento próximo."
         eyebrow="Odontologia em Taguatinga Norte"
         primaryLabel="Agendar pelo WhatsApp"
