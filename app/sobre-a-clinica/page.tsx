@@ -35,17 +35,17 @@ export default function AboutPage() {
               a equipe busca construir planos claros, confortáveis e sustentáveis para o sorriso.
             </p>
           </div>
-          <figure className="min-w-0">
+          <figure className="mx-auto w-full max-w-[320px] min-w-0 sm:max-w-[340px]">
             <Image
-              alt="Composição ilustrativa com modelo dentário e espelho odontológico sobre uma bandeja"
+              alt="Retrato da Dra. Cíntia Ribeiro Naves com o uniforme azul-marinho da clínica"
               className="h-auto w-full rounded-[24px] shadow-soft"
-              height={1024}
-              sizes="(min-width: 1152px) 540px, (min-width: 1024px) 50vw, calc(100vw - 32px)"
-              src="/images/cuidado-odontologico-azul.webp"
-              width={1536}
+              height={1280}
+              sizes="(min-width: 640px) 340px, (min-width: 360px) 320px, calc(100vw - 40px)"
+              src="/images/equipe/dra-cintia-uniforme.webp"
+              width={853}
             />
             <figcaption className="mt-3 text-xs leading-5 text-slate-500">
-              Imagem ilustrativa.
+              Dra. Cíntia Ribeiro Naves · CRO-DF 3547
             </figcaption>
           </figure>
         </div>

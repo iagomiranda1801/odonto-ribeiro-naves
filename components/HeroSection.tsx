@@ -10,6 +10,9 @@ type HeroSectionProps = {
   image?: string;
   imageAlt?: string;
   imageCaption?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  portrait?: boolean;
   primaryLabel?: string;
   secondaryLabel?: string;
   secondaryHref?: string;
@@ -23,6 +26,9 @@ export function HeroSection({
   image = "/images/sorriso-editorial-azul.webp",
   imageAlt = "Retrato ilustrativo de uma pessoa adulta com sorriso natural",
   imageCaption = "Imagem ilustrativa.",
+  imageWidth = 1536,
+  imageHeight = 1024,
+  portrait = false,
   primaryLabel = "Agendar pelo WhatsApp",
   secondaryLabel = "Conhecer tratamentos",
   secondaryHref = "/#servicos",
@@ -64,15 +70,15 @@ export function HeroSection({
             </div>
           ) : null}
         </div>
-        <figure className="relative min-w-0 self-center">
+        <figure className={`relative min-w-0 self-center ${portrait ? "mx-auto w-full max-w-[320px] sm:max-w-[340px] lg:max-w-[350px]" : ""}`}>
           <Image
             alt={imageAlt}
             className="h-auto w-full rounded-3xl bg-brand-50 object-contain shadow-soft"
-            height={1024}
+            height={imageHeight}
             priority
-            sizes="(min-width: 1240px) 600px, (min-width: 1024px) 50vw, calc(100vw - 40px)"
+            sizes={portrait ? "(min-width: 1024px) 350px, (min-width: 640px) 340px, (min-width: 360px) 320px, calc(100vw - 40px)" : "(min-width: 1240px) 600px, (min-width: 1024px) 50vw, calc(100vw - 40px)"}
             src={image}
-            width={1536}
+            width={imageWidth}
           />
           <figcaption className="mt-3 text-xs leading-5 text-slate-500">{imageCaption}</figcaption>
         </figure>

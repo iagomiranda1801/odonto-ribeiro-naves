@@ -48,12 +48,14 @@ export function Footer() {
               <MapPin aria-hidden className="mt-0.5 h-5 w-5 text-brand-600" />
               {siteConfig.address.display}
             </li>
-            <li className="flex gap-3">
-              <Phone aria-hidden className="mt-0.5 h-5 w-5 text-brand-600" />
-              <a className="focus-ring rounded" href={`tel:${siteConfig.landlineRaw}`}>
-                {siteConfig.landlineDisplay}
-              </a>
-            </li>
+            {siteConfig.landlines.map((phone) => (
+              <li className="flex gap-3" key={phone.raw}>
+                <Phone aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-brand-600" />
+                <a className="focus-ring rounded" href={`tel:${phone.raw}`}>
+                  {phone.display}
+                </a>
+              </li>
+            ))}
             <li className="flex gap-3">
               <Phone aria-hidden className="mt-0.5 h-5 w-5 text-brand-600" />
               <a className="focus-ring rounded" href={whatsappUrl} rel="noopener noreferrer" target="_blank">

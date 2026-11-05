@@ -2,8 +2,10 @@
   name: "Odontologia Ribeiro Naves",
   shortName: "Ribeiro Naves",
   baseUrl: (process.env.NEXT_PUBLIC_SITE_URL || "https://odonto-ribeiro-naves.vercel.app").replace(/\/+$/, ""),
-  landlineDisplay: "(61) 3562-6592",
-  landlineRaw: "+556135626592",
+  landlines: [
+    { display: "(61) 3562-6592", raw: "+556135626592" },
+    { display: "(61) 3562-6542", raw: "+556135626542" }
+  ],
   phoneDisplay: "(61) 98617-4519",
   phoneRaw: "+5561986174519",
   address: {

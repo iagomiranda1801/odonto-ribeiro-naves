@@ -24,11 +24,14 @@ export default function HomePage() {
       <SEOJsonLd data={breadcrumbSchema([])} />
       <HeroSection
         compact
-        image="/images/dra-cintia-ribeiro.jpg"
-        imageAlt="Dra. Cintia Ribeiro, dentista da Odontologia Ribeiro Naves"
-        imageCaption="Dra. Cintia Ribeiro"
         description="Implantes, lentes dentais, alinhadores e clareamento com planejamento individual e acompanhamento próximo."
         eyebrow="Odontologia em Taguatinga Norte"
+        image="/images/equipe/dra-cintia-sorriso.webp"
+        imageAlt="Dra. Cíntia Ribeiro Naves sorrindo, de blusa branca, na clínica"
+        imageCaption="Dra. Cíntia Ribeiro Naves · CRO-DF 3547"
+        imageWidth={853}
+        imageHeight={1280}
+        portrait
         primaryLabel="Agendar pelo WhatsApp"
         title="Há 33 anos cuidando de sorrisos em Taguatinga."
       />
@@ -108,17 +111,17 @@ export default function HomePage() {
 
       <section className="bg-brand-50 py-12 sm:py-20">
         <div className="container-padded grid items-center gap-10 lg:grid-cols-2">
-          <figure className="min-w-0">
+          <figure className="mx-auto w-full max-w-[320px] min-w-0 sm:max-w-[340px]">
             <Image
-              alt="Composição ilustrativa com modelo dentário e espelho odontológico sobre uma bandeja"
+              alt="Dra. Cíntia Ribeiro Naves sentada à mesa, com uma caneta e uma agenda"
               className="h-auto w-full rounded-[24px] shadow-soft"
-              height={1024}
-              sizes="(min-width: 1152px) 540px, (min-width: 1024px) 50vw, calc(100vw - 32px)"
-              src="/images/cuidado-odontologico-azul.webp"
-              width={1536}
+              height={1280}
+              sizes="(min-width: 640px) 340px, (min-width: 360px) 320px, calc(100vw - 40px)"
+              src="/images/equipe/dra-cintia-consulta.webp"
+              width={853}
             />
             <figcaption className="mt-3 text-xs leading-5 text-slate-500">
-              Imagem ilustrativa.
+              Atendimento com escuta, planejamento e cuidado próximo.
             </figcaption>
           </figure>
           <div>

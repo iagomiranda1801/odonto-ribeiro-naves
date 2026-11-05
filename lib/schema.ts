@@ -9,7 +9,7 @@ export function dentistSchema(path = "/") {
     name: siteConfig.name,
     url: `${siteConfig.baseUrl}${path}`,
     image: `${siteConfig.baseUrl}/images/og-ribeiro-naves.svg`,
-    telephone: siteConfig.landlineRaw,
+    telephone: siteConfig.landlines[0].raw,
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",
@@ -32,12 +32,12 @@ export function dentistSchema(path = "/") {
       identifier: dentist.registry
     })),
     contactPoint: [
-      {
+      ...siteConfig.landlines.map((phone) => ({
         "@type": "ContactPoint",
-        telephone: siteConfig.landlineRaw,
+        telephone: phone.raw,
         contactType: "appointments",
         availableLanguage: "Portuguese"
-      },
+      })),
       {
         "@type": "ContactPoint",
         telephone: siteConfig.phoneRaw,
